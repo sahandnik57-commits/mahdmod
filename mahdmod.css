@@ -1,0 +1,91 @@
+/* ===========================================================
+   Mahd Mod Panel - Frontend Style
+   تم رنگی: نارنجی (اصلی) + سفید (پس‌زمینه) + آبی (تاکید/دکمه ثانویه)
+   =========================================================== */
+:root{
+	--mahdmod-orange: #E97A1F;
+	--mahdmod-orange-dark: #C5620F;
+	--mahdmod-blue: #1F4E8C;
+	--mahdmod-blue-dark: #163A6B;
+	--mahdmod-white: #FFFFFF;
+	--mahdmod-bg: #FBFAF7;
+	--mahdmod-text: #23262B;
+	--mahdmod-border: #EADFCF;
+	--mahdmod-radius: 10px;
+}
+
+/* ---------- دکمه‌ها ---------- */
+.mahdmod-btn{
+	display:inline-block;
+	padding:10px 26px;
+	border-radius: var(--mahdmod-radius);
+	font-weight:700;
+	text-decoration:none;
+	cursor:pointer;
+	border:2px solid transparent;
+	transition: all .2s ease;
+	font-size:15px;
+}
+.mahdmod-btn-primary{ background: var(--mahdmod-orange); color:#fff; border-color: var(--mahdmod-orange);}
+.mahdmod-btn-primary:hover{ background: var(--mahdmod-orange-dark); border-color: var(--mahdmod-orange-dark); color:#fff;}
+.mahdmod-btn-outline{ background:#fff; color: var(--mahdmod-blue); border-color: var(--mahdmod-blue);}
+.mahdmod-btn-outline:hover{ background: var(--mahdmod-blue); color:#fff;}
+.mahdmod-btn-inquiry{ background: var(--mahdmod-blue); color:#fff; border-color: var(--mahdmod-blue);}
+.mahdmod-btn-inquiry:hover{ background: var(--mahdmod-blue-dark); color:#fff;}
+
+/* ---------- اسلایدر ---------- */
+.mahdmod-slider{ position:relative; width:100%; height:min(60vw,480px); border-radius: var(--mahdmod-radius); overflow:hidden; box-shadow:0 10px 30px rgba(31,78,140,.15); }
+.mahdmod-slide{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity .8s ease; }
+.mahdmod-slide.active{ opacity:1; }
+.mahdmod-slider-dots{ position:absolute; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:2; }
+.mahdmod-dot{ width:11px; height:11px; border-radius:50%; background: rgba(255,255,255,.6); cursor:pointer; border:2px solid var(--mahdmod-orange); }
+.mahdmod-dot.active{ background: var(--mahdmod-orange); }
+.mahdmod-slider-empty{ padding:40px; text-align:center; background:#fff3e6; border:1px dashed var(--mahdmod-orange); border-radius:var(--mahdmod-radius); color:var(--mahdmod-orange-dark); }
+
+/* ---------- اخبار ---------- */
+.mahdmod-news-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:22px; margin:20px 0; }
+.mahdmod-news-card{ background:#fff; border:1px solid var(--mahdmod-border); border-radius:var(--mahdmod-radius); overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.05); display:flex; flex-direction:column; }
+.mahdmod-news-img img{ width:100%; height:170px; object-fit:cover; display:block; }
+.mahdmod-news-body{ padding:16px; flex:1; display:flex; flex-direction:column; gap:8px; }
+.mahdmod-news-body h3{ margin:0; color:var(--mahdmod-blue); font-size:18px; }
+.mahdmod-news-body p{ margin:0; color:#555; font-size:14px; flex:1; }
+
+/* ---------- رشته‌های تخصصی ---------- */
+.mahdmod-specialties{ display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; }
+.mahdmod-specialties-col{ display:flex; flex-direction:column; gap:8px; min-width:280px; flex:1; }
+.mahdmod-specialty-item{ display:flex; justify-content:space-between; align-items:center; background:#fff; border:1.5px solid var(--mahdmod-border); border-radius:8px; padding:14px 18px; font-size:15px; font-weight:600; color:var(--mahdmod-text); cursor:pointer; transition:.2s; text-align:right; }
+.mahdmod-specialty-item:hover, .mahdmod-specialty-item.active{ border-color: var(--mahdmod-orange); background: #fff6ec; color: var(--mahdmod-orange-dark); }
+.mahdmod-arrow{ color: var(--mahdmod-blue); font-size:20px; }
+.mahdmod-mentors-result{ flex:2; min-width:300px; background:#fff; border:1px solid var(--mahdmod-border); border-radius:var(--mahdmod-radius); padding:20px; min-height:200px; }
+.mahdmod-result-title{ color:var(--mahdmod-blue); border-bottom:2px solid var(--mahdmod-orange); padding-bottom:8px; margin-top:0; }
+.mahdmod-mentor-grid, .mahdmod-rep-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; }
+.mahdmod-mentor-card, .mahdmod-rep-card{ background:#fbfaf7; border:1px solid var(--mahdmod-border); border-radius:8px; padding:14px; text-align:center; }
+.mahdmod-mentor-img img, .mahdmod-rep-img img{ width:100%; height:140px; object-fit:cover; border-radius:6px; }
+.mahdmod-mentor-card h4, .mahdmod-rep-card h4{ margin:10px 0 4px; color:var(--mahdmod-text); }
+.mahdmod-grade-badge{ display:inline-block; padding:2px 12px; border-radius:20px; font-size:12px; font-weight:700; color:#fff; }
+.mahdmod-grade-badge.grade-A{ background:var(--mahdmod-orange); }
+.mahdmod-grade-badge.grade-B{ background:var(--mahdmod-blue); }
+.mahdmod-grade-badge.grade-C{ background:#8a8a8a; }
+.mahdmod-hint{ color:#888; }
+
+/* ---------- فرم‌ها ---------- */
+.mahdmod-form{ max-width:640px; background:#fff; border:1px solid var(--mahdmod-border); border-radius:var(--mahdmod-radius); padding:26px; box-shadow:0 4px 14px rgba(0,0,0,.05); }
+.mahdmod-form-row{ margin-bottom:16px; display:flex; flex-direction:column; gap:6px; }
+.mahdmod-form-row label{ font-weight:700; color:var(--mahdmod-blue); font-size:14px; }
+.mahdmod-form-row input, .mahdmod-form-row select, .mahdmod-form-row textarea{
+	padding:10px 12px; border:1.5px solid var(--mahdmod-border); border-radius:8px; font-family:inherit; font-size:14px; background:#fdfdfb;
+}
+.mahdmod-form-row input:focus, .mahdmod-form-row select:focus, .mahdmod-form-row textarea:focus{ outline:none; border-color: var(--mahdmod-orange); }
+.mahdmod-alert{ padding:14px 18px; border-radius:8px; margin-bottom:18px; font-weight:600; }
+.mahdmod-alert-success{ background:#eaf7ec; color:#1f7a34; border:1px solid #b7e3bf; }
+.mahdmod-shivenameh-links{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+
+/* ---------- نقشه ---------- */
+.mahdmod-map-wrap{ width:100%; border-radius:var(--mahdmod-radius); overflow:hidden; border:1px solid var(--mahdmod-border); }
+.mahdmod-map-wrap iframe{ width:100%; min-height:380px; border:0; display:block; }
+
+.mahdmod-empty{ padding:24px; text-align:center; color:#999; background:#f6f6f6; border-radius:var(--mahdmod-radius); }
+
+@media (max-width: 782px){
+	.mahdmod-specialties{ flex-direction:column; }
+}

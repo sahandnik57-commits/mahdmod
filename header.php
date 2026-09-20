@@ -1,0 +1,3 @@
+<!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width,initial-scale=1"><?php wp_head(); ?></head><body <?php body_class(); ?> dir="rtl"><?php wp_body_open(); ?>
+<div class="topbar"><div class="wrap"><span>مهد مد — سامانه آموزش و همکاری تخصصی</span><span>پشتیبانی و اطلاعات از طریق مدیریت سایت</span></div></div>
+<header class="header"><div class="wrap head"><a class="brand" href="<?php echo esc_url(home_url('/')); ?>">مهد <span>مد</span></a><?php mm_nav(); ?><button class="menu-toggle" aria-label="منو">☰</button></div></header>
